@@ -332,6 +332,7 @@ ol {
 }
 
 /*===  Tab  ===*/
+/*
 .tab-element .nav-tabs {
 	border-bottom: none;
 	margin-bottom: 35px;
@@ -461,7 +462,7 @@ ol {
 	margin-top: 30px;
 	margin-right: 50px;
 }
-
+/*
 .nav-switch {
 	display: none;
 }
@@ -1828,9 +1829,16 @@ ol {
 	.phone-number {
 		margin-right: 30px;
 	}
+	/*D.....
 	.nav-menu ul li a {
 		margin-right: 20px;
+	} */
+	/*D added --*/
+	.dropdown:hover .dropdown-menu {
+		display: inline-block;
+		margin-top: 0;
 	}
+
 	.slide-content {
 		margin-left: 220px;
 	}
@@ -1858,6 +1866,11 @@ ol {
 	.logo-area {
 		padding: 20px 40px 30px;
 	}
+	/*D added --*/
+	.dropdown:hover .dropdown-menu {
+		display: inline-block;
+		margin-top: 0;
+	}
 	.slide-content {
 		margin-left: 170px;
 		margin-bottom: -35px;
@@ -1884,11 +1897,12 @@ ol {
 		bottom: 70%;
 		right: 100px;
 	}
+	/*D....
 	.nav-menu ul li a {
 		margin-right: 5px;
 		font-size: 13px;
 		padding: 37px 7px 5px;
-	}
+	}*/
 	.phone-number {
 		font-size: 12px;
 		margin-right: 10px;
@@ -1963,6 +1977,12 @@ ol {
 }
 
 /* Large Mobile :480px. */
+/*D added --*/
+.dropdown:hover .dropdown-menu {
+	display: inline-block;
+	margin-top: 0;
+}
+/* D....
 @media only screen and (max-width: 767px) {
 	h1,
 	.sp-title {
@@ -2008,7 +2028,7 @@ ol {
 	.nav-menu ul li.active>a:after,
 	.nav-menu ul li a:hover:after {
 		height: 10px;
-	}
+	} */
 	.hero-section {
 		height: auto;
 	}
@@ -2116,12 +2136,19 @@ ol {
 		background: #121212;
 		padding-right: 66px;
 	}
+	/*D added --*/
+	.dropdown:hover .dropdown-menu {
+		display: inline-block;
+		margin-top: 0;
+	}
+	/*D...
 	.nav-menu {
 		width: 100%;
 		left: 0;
 		margin-top: 0;
 		border-top: 2px solid;
 	}
+	*/
 	.left-bar {
 		display: none;
 	}
