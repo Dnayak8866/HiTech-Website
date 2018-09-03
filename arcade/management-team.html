@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Arcade - Architecture</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Arcade - Architecture Template">
+	<meta name="keywords" content="arcade, architecture, onepage, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/navbar.css"/>
+
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	<style>
+	.accordion {
+	margin: auto;
+	width: 1000px;
+}
+.accordion input {
+	display: none;
+}
+.box {
+	position: relative;
+	background: white;
+    height: 64px;
+    transition: all .15s ease-in-out;
+}
+.box::before {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+}
+header.box {
+	background: #dcdcdc;
+	z-index: 100;
+	cursor: initial;
+	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
+}
+header .box-title {
+	margin: 0;
+	font-weight: normal;
+	font-size: 16pt;
+	color: black;
+	cursor: initial;
+}
+.box-title {
+	width: calc(100% - 40px);
+	height: 64px;
+	line-height: 64px;
+	padding: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+}
+.box-content {
+	width: calc(100% - 40px);
+	padding: 30px 20px;
+	font-size: 11pt;
+	color: rgba(0,0,0,.54);
+	display: none;
+}
+.box-close {
+	position: absolute;
+	height: 64px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	display: none;
+}
+input:checked + .box {
+	height: auto;
+	margin: 16px 0;
+    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+}
+input:checked + .box .box-title {
+	border-bottom: 1px solid rgba(0,0,0,.18);
+}
+input:checked + .box .box-content,
+input:checked + .box .box-close {
+	display: inline-block;
+}
+.arrows section .box-title {
+	padding-left: 44px;
+	width: calc(100% - 64px);
+}
+.arrows section .box-title:before {
+	position: absolute;
+	display: block;
+	content: '\203a';
+	font-size: 18pt;
+	left: 20px;
+	top: -2px;
+	transition: transform .15s ease-in-out;
+	color: rgba(0,0,0,.54);
+}
+input:checked + section.box .box-title:before {
+	transform: rotate(90deg);
+}
+
+	</style>
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+	
+		<!-- Header section start -->   
+		<header class="header-area">
+
+			
+				<a href="index.html" class="logo-area">
+						<img src="img/logo.png" alt="">
+					</a>
+					<div class="navbar">
+
+		<div class="nav-switch">
+			<i class="fa fa-bars"></i>
+		</div>
+				<ul>
+				  <li class="navbar-item navbar-button navbar-dropdown">
+					<a href="#">About Us</a>
+					<div class="dropdown-arrow"></div>
+					<ul class="dropdown-content" >
+					 
+					  <li>
+						<a href="about.html">Who We Are</a>
+					  </li>
+					  <li>
+							<a href="management-team.html">Our Team</a>
+						  </li>
+						  <li>
+								<a href="services-capabilities.html">Services & Capabilities</a>
+							  </li>
+							  <li>
+									<a href="quality-safety.html">Our Standards</a>
+								  </li>
+					</ul>
+				  </li>
+				  <li class="navbar-item navbar-button navbar-dropdown">
+					<a href="#">Our Expertise</a>
+					<div class="dropdown-arrow"></div>
+					<ul class="dropdown-content">
+					  <li>
+						<a href="plant-machinery.html">Plant & Machinery</a>
+					  </li>
+					  <li>
+						<a href="formwork.html">Formwork Systems</a>
+					  </li>
+					  <li>
+							<a href="technology.html">Technology</a>
+						  </li>
+					</ul>
+				  </li>
+				  <li class="navbar-item navbar-button navbar-dropdown">
+						<a href="#">Projects</a>
+						<div class="dropdown-arrow"></div>
+						<ul class="dropdown-content">
+						  <li>
+							<a href="residential-projects.html">Residential</a>
+						  </li>
+						  <li>
+							<a href="commercial-projects.html">Commercial</a>
+						  </li>
+						  <li>
+								<a href="industrial-projects.html">Industrial</a>
+							  </li>
+							  <li>
+									<a href="institutional-projects.html">Institutional</a>
+								  </li>
+						</ul>
+					  </li>
+					  <li class="navbar-item">
+							<a href="our-clients.html">Clients</a>
+					  </li>
+					  <li class="navbar-item">
+							<a href="careers.html">Careers</a>
+					  </li>
+					  <li class="navbar-item">
+							<a href="contact.html">Contact Us</a>
+					  </li>
+				  
+				</ul>
+			  </div>
+	</header>
+
+
+	<!-- Page header section start -->
+	<section class="page-header-section set-bg" data-setbg="img/team-slider.png">
+	<!--	<div class="container">
+			<h1 class="header-title">Our Team<span></span></h1>
+		</div>-->
+	</section>
+	<!-- Page header section end -->
+
+
+
+	<!-- Intro section start --
+	<section class="intro-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 intro-text">
+					<p>Taking one new challenge after another, Hi-Tech today boasts of a pan-spectrum portfolio of Industrial Structures, Residential Buildings, Commercial Buildings and Institutional & Other buildings of various scales.
+
+							Its credibility among clients and consultants is based on facts–
+							
+						<br> -	It has a proven track record of delivering quality on time, for every project.
+							
+						<br> -	It is one of the few construction companies in Ahmedabad with quality system certification ISO 9001:2008 and Govt. of Gujarat approved ‘AA’ class special category – I (Buildings)
+							
+						<br> -	With an army of labourers and 275+ experienced and well trained professionals, Hi-Tech is capable of responding to complex challenges.</p>
+						<div class="row">
+								<div class="col-md-6">
+										<img src="img/icon/dark/vision.png"><h2>Our <span>VISION</span> </h2>
+								<p>To be the first preferred company for customized construction services in the industry.</p>
+										</div>
+										<div class="col-md-6">
+											<img src="img/icon/dark/mountain.png">
+									<h2>Our <span>MISSION</span> </h2>
+									<p>To provide quality construction and timely completion through enhanced construction tactics and practice with total commitment.</p>
+										</div>
+						</div>
+					
+				</div>
+				<div class="col-lg-5">
+					<br><br>
+						<img src="img/about.png" alt="">
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end --
+
+
+	<!-- Testimonials section start --
+	<section class="testimonials-section spad">
+		<div class="testimonials-image-box"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-7 pl-lg-0 offset-lg-5 cta-content">
+					<h1>Our  <span>Strengths</span></h1>
+					<div class="testimonials-slider" id="test-slider">
+						<div class="ts-item">
+							<h2>
+								Qualified Leadership</h2>
+								
+							<p>Hi-Tech’s promoters are highly qualified Civil Engineers who know not only the business of construction but also the craft of building. This helps them understand the finer nuances of construction and turn clients’ visions into realities.</p>
+						
+						
+						</div>
+						<div class="ts-item">
+							<h2>Adopting the best from the ‘Big’</h2>
+						<p>Hi-Tech has been quick to adopt best practices in the industry in systems and processes. It has excellent project planning and monitoring systems and well established quality and safety protocols.</p>
+						</div>
+						<div class="ts-item">
+								<h2>Qualified and Experienced Execution Team</h2>
+<p>Qualified leaders make qualified teams. Hi-Tech has invested in its people and created trained professionals from the smallest to highest levels of the organisation so that good decisions are made at each level.</p>							
+						</div>
+						<div class="ts-item">
+								<h2>Retaining the best from ‘Small’</h2>
+								<p>Even as it grows, Hi-Tech retains some of the best advantages of being small – being cost-effective and flexible. With a project-specific working approach, it is able to adapt to the needs of the clients and respond to emergent needs of the project.</p>
+						</div>
+						<div class="ts-item">
+							<h2>Constant Technological Upgradation</h2>
+							<p>Hi-Tech has continually invested in upgrading its Construction Technology.</p>
+						</div>
+					</div>
+					<div class="slide-num-holder test-slider" id="snh-2"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Testimonials section end --
+<br><br><br><br><br>
+<!-- Service box section start --
+<div class="service-box-section spad set-bg" data-setbg="img/service-bg.jpg">
+	<div class="container">
+		<h1>Our  <span>Milestones</span></h1>
+
+
+		<div class="row">
+			<div class="col-lg-4 col-md-6">
+				<div class="solid-service-box">
+					<img src="img/icon/dark/cityscape.png">
+					<h2>2001</h2>
+					<h3>Applewoods</h3>
+					<p>Got first ever largest project of 9 lacs sq.ft. “APPLEWOODS”</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6">
+				<div class="solid-service-box">
+						<img src="img/icon/dark/office.png">
+					<h2>2015</h2>
+					<h3>WestGate</h3>
+					<p>Completed 70m project, tallest commercial tower in Ahmedabad with 23 storeys</p>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-12">
+				<div class="solid-service-box">
+						<img src="img/icon/dark/buildings.png">
+
+					<h2>2017</h2>
+					<h3>Sumel 8</h3>
+					<p>Completed highest ever project of 16 lacs sq.ft. project with all services</p>
+			
+				</div>
+		</div>
+		</div>
+	</div>
+</div>
+<!-- Service box section end -->
+<div class="container">
+	<br>
+		<h1 class="header-title">Our <span>Team</span></h1>
+	</div>
+	<!-- Leadership Team section start -->
+	<section class="team-section spad">
+		<div class="container">
+			<div class="section-title mb100">
+				<h1>Leadership</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-md-6">
+					<div class="team-member">
+						<img src="img/team/1.jpg" alt="">
+							<h2>Munir Shah</h2>
+							<h4>Co-founder (B.Tech, Civil, CEPT)</h4>
+						
+					</div>
+					<p>Having 25 years of rich experience in management and execution of civil construction. He has utilized his expertise & innovative technologies to achieve excellent quality of works in every project within agreed time schedule. His integrity, knowledge and business ethics has taken this company to the remarkable position in construction industry. His responsiveness & the way to conduct the business is appreciable.
+					</p>
+				</div>
+				<div class="col-lg-4 col-md-4" style="align-content: center">
+					<div class="team-member">
+						<img src="img/team/2.jpg" alt="">
+						<h2>Tejas Dalal</h2>
+							<h4>Co-founder (M.S, Civil, USA)</h4>
+						
+					</div>
+<p>He is technically very competent & highly professional. Having 25 years of experience in management and execution of civil construction, including 5 years of experience in USA.  Armed with an international exposure of best practices and latest know-how, his dream has been to transform the perception of construction businesses in India by making Hi-Tech the symbol of professional integrity.
+</p>
+				</div>
+				<div class="col-lg-4 col-md-6">
+					<div class="team-member">
+						<img src="img/team/3.jpg" alt="">
+							<h2>Manish Dave</h2>
+							<h4>COO</h4>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="team-section spad">
+		<div class="container">
+			<div class="section-title mb100">
+				<h1>Management</h1>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/dhyey.jpg" alt="">
+							<h5>Dhyey Pandit</h5>
+							<p>Planning & Billing Engineer</p>
+						
+					</div>
+					
+				</div>
+				<div class="col-lg-3 col-md-4" style="align-content: center">
+					<div class="team-member">
+						<img src="img/team/managers/hardik.jpg" alt="">
+						<h5>Hardik Pandya</h5>
+						<p>Jr. Admin Officer</p>
+
+					</div>				
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/sachin.jpg" alt="">
+						<h5>Sachin Raval</h5>
+						<p>Civil Engineer</p>
+
+					</div>
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/sachin.jpg" alt="">
+						<h5>Sachin Raval</h5>
+						<p>Civil Engineer</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/dhyey.jpg" alt="">
+							<h5>Dhyey Pandit</h5>
+							<p>Planning & Billing Engineer</p>
+						
+					</div>
+					
+				</div>
+				<div class="col-lg-3 col-md-4" style="align-content: center">
+					<div class="team-member">
+						<img src="img/team/managers/hardik.jpg" alt="">
+						<h5>Hardik Pandya</h5>
+						<p>Jr. Admin Officer</p>
+
+					</div>				
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/sachin.jpg" alt="">
+						<h5>Sachin Raval</h5>
+						<p>Civil Engineer</p>
+
+					</div>
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/sachin.jpg" alt="">
+						<h5>Sachin Raval</h5>
+						<p>Civil Engineer</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/dhyey.jpg" alt="">
+							<h5>Dhyey Pandit</h5>
+							<p>Planning & Billing Engineer</p>
+						
+					</div>
+					
+				</div>
+				<div class="col-lg-3 col-md-4" style="align-content: center">
+					<div class="team-member">
+						<img src="img/team/managers/hardik.jpg" alt="">
+						<h5>Hardik Pandya</h5>
+						<p>Jr. Admin Officer</p>
+
+					</div>				
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/sachin.jpg" alt="">
+						<h5>Sachin Raval</h5>
+						<p>Civil Engineer</p>
+
+					</div>
+
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="team-member">
+						<img src="img/team/managers/sachin.jpg" alt="">
+						<h5>Sachin Raval</h5>
+						<p>Civil Engineer</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<!--
+	<nav class="accordion arrows">
+		<header class="box">
+			<label for="acc-close" class="box-title">Our Services</label>
+		</header>
+		<input type="radio" name="accordion" id="cb1" />
+		<section class="box">
+			<label class="box-title" for="cb1">Readme</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">Click on an item to open. Click on its header or the list header to close.</div>
+		</section>
+		<input type="radio" name="accordion" id="cb2" />
+		<section class="box">
+			<label class="box-title" for="cb2">Read me too</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">Add the class 'arrows' to nav.accordion to add dropdown arrows.</div>
+		</section>
+		<input type="radio" name="accordion" id="cb3" />
+		<section class="box">
+			<label class="box-title" for="cb3">Item 3</label>
+			<label class="box-close" for="acc-close"></label>
+			<div class="box-content">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque finibus tristique nisi, maximus ullamcorper ante finibus eget.</div>
+		</section>
+
+		<input type="radio" name="accordion" id="acc-close" />
+	</nav>
+	<!-- Team section end --
+
+	<section class="promo-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9 promo-text">
+					<h1>In need of a <span>fabulouse</span> home?</h1>
+					<p>Pellentesque lorem dolor, malesuada eget tortor vitae, tristique lacinia lectus. Pellentesque sed accumsan risus.</p>
+				</div>
+				<div class="col-lg-3 text-lg-right">
+					<a href="#" class="site-btn sb-dark mt-4">Get in Touch</a>
+				</div>
+			</div>
+		</div>
+	</section>-->
+
+<br><br><br>
+
+
+	<!-- Footer section start -->
+	<footer class="footer-section">
+			<div class="footer-social">
+				<div class="social-links">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/hitechpplofficial/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.facebook.com/hitechpplofficial/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/hitechppl"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+							<div class="col-md-4">
+								<div class="footer-item">
+										<h3>Quick Links</h3>
+
+									<div class="row">
+									<div class="col-md-6">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About us</a></li>
+										<li><a href="services-capabilities.html">Expertise</a></li>
+										<li><a href="projects.html">Projects</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<ul>
+											<li><a href="our-clients.html">Clients</a></li>
+											<li><a href="careers.html">Careers</a></li>
+											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="projects.html">Projects</a></li>
+										</ul>
+									</div>
+								</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="footer-item">
+									<h3>Address</h3>
+									<p>Hi-Tech Projects Pvt. Ltd. <br>
+											B-401, Solitaire Corporate Park <br> 
+											Nr. Divya Bhaskar House <br>
+											S. G. Highway, Ahmedabad 380051. </p>
+									
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="footer-item">
+										<h3>Contact Us</h3>
+										<table>
+											<tr>
+											<th style="padding-right:10px">
+												<p>Phone: </p>
+											</th>
+											<td><p> +91 - 990 4592 200</p></td> 
+										</tr>
+										<tr>
+											<th></th>
+											<td> <p> +91 - 990 4288 900</p></td>
+	
+										</tr>
+											
+											<tr>
+													<th style="padding-right:10px">
+															<p>Email: </p>
+														</th>
+											<td><p>info@hitechengineers.in</p></td>
+										</table>
+										</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		
+		</footer>
+		<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.owl-filter.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

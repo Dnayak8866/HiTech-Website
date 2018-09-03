@@ -1,0 +1,127 @@
+.navbar {
+    font-family: sans-serif;
+    height: 50px;
+    background-color: black;
+    font-size: 15px;
+    margin-top: 15px;
+  
+  }
+  
+  .navbar > ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    height: 100%;
+  }
+  
+  .navbar .navbar-item {
+    float: left;
+    height: 100%;
+    padding-left: 40px;
+  
+  }
+  
+  .navbar .navbar-button {
+    min-width: 75px;
+  }
+  
+  .navbar .navbar-button > a {
+    padding: 0 px;
+  }
+  
+  .navbar .navbar-button:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .navbar .navbar-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 100%;
+    color: white;
+  }
+  
+  .navbar .dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 5px 0;
+    list-style: none;
+    background-color: white;
+    min-width: 175px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .navbar .navbar-button:hover .dropdown-content {
+    display: block;
+  }
+  
+  .navbar .dropdown-content li {
+    height: 28px;
+    font-size: 14px;
+    padding-left: 20px;
+   
+  
+  }
+  
+  .navbar .dropdown-content li:hover {
+    background-color: black;
+    
+  }
+  
+  .navbar .dropdown-content a {
+    color: #333333;
+    justify-content: flex-start;
+    text-align: center;
+    
+  }
+  
+  
+  .navbar .dropdown-content a:hover {
+    color: white;
+  }
+  
+  .navbar .navbar-logo {
+    float: right;
+    margin-right: 25px;
+    font-size: 20px;
+  }
+  
+  .navbar .navbar-dropdown > a:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid white;
+    margin-left: 7px;
+  }
+  
+  .navbar .document-title-container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 10px;
+  }
+  
+  .navbar .document-title-input {
+    background-color: inherit;
+    border: none;
+    font-size: inherit;
+    color: white;
+    padding: 5px 7px 2px 7px;
+    outline: none;
+    width: 10em;
+  }
+  
+  .navbar .document-title-input:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: -2px;
+  }
+  
+  .navbar .document-title-input:focus {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    margin-bottom: -2px;
+  }
+  

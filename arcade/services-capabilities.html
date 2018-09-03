@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Arcade - Architecture</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Arcade - Architecture Template">
+	<meta name="keywords" content="arcade, architecture, onepage, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->   
+	<link href="img/favicon.ico" rel="shortcut icon"/>
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/animate.css"/>
+	<link rel="stylesheet" href="css/owl.carousel.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/navbar.css"/>
+
+
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+    <style>
+        .accordion {
+        margin: auto;
+    }
+    .accordion input {
+        display: none;
+    }
+    .box {
+        position: relative;
+        background: white;
+        height: 64px;
+        transition: all .15s ease-in-out;
+    }
+    .box::before {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        pointer-events: none;
+        box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+    }
+    header.box {
+        background: #dcdcdc;
+        z-index: 100;
+        cursor: initial;
+        box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
+    }
+    header .box-title {
+        margin: 0;
+        font-weight: normal;
+        font-size: 16pt;
+        color: black;
+        cursor: initial;
+    }
+    .box-title {
+        width: calc(100% - 40px);
+        height: 64px;
+        line-height: 64px;
+        padding: 0 20px;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
+    }
+    .box-content {
+        width: calc(100% - 40px);
+        padding: 30px 20px;
+        font-size: 11pt;
+        color: rgba(0,0,0,.54);
+        display: none;
+    }
+    .box-close {
+        position: absolute;
+        height: 64px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+        display: none;
+    }
+    input:checked + .box {
+        height: auto;
+        margin: 16px 0;
+        box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
+    }
+    input:checked + .box .box-title {
+        border-bottom: 1px solid rgba(0,0,0,.18);
+    }
+    input:checked + .box .box-content,
+    input:checked + .box .box-close {
+        display: inline-block;
+    }
+    .arrows section .box-title {
+        padding-left: 44px;
+        width: calc(100% - 64px);
+    }
+    .arrows section .box-title:before {
+        position: absolute;
+        display: block;
+        content: '\203a';
+        font-size: 18pt;
+        left: 20px;
+        top: -2px;
+        transition: transform .15s ease-in-out;
+        color: rgba(0,0,0,.54);
+    }
+    input:checked + section.box .box-title:before {
+        transform: rotate(90deg);
+    }
+    
+        </style>
+</head>
+<body>
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+	
+		<!-- Header section start -->   
+		<header class="header-area">
+
+			
+				<a href="index.html" class="logo-area">
+						<img src="img/logo.png" alt="">
+					</a>
+					<div class="navbar">
+
+		<div class="nav-switch">
+			<i class="fa fa-bars"></i>
+		</div>
+				<ul>
+				  <li class="navbar-item navbar-button navbar-dropdown">
+					<a href="#">About Us</a>
+					<div class="dropdown-arrow"></div>
+					<ul class="dropdown-content" >
+					 
+					  <li>
+						<a href="about.html">Who We Are</a>
+					  </li>
+					  <li>
+							<a href="management-team.html">Our Team</a>
+						  </li>
+						  <li>
+								<a href="services-capabilities.html">Services & Capabilities</a>
+							  </li>
+							  <li>
+									<a href="quality-safety.html">Our Standards</a>
+								  </li>
+					</ul>
+				  </li>
+				  <li class="navbar-item navbar-button navbar-dropdown">
+					<a href="#">Our Expertise</a>
+					<div class="dropdown-arrow"></div>
+					<ul class="dropdown-content">
+					  <li>
+						<a href="plant-machinery.html">Plant & Machinery</a>
+					  </li>
+					  <li>
+						<a href="formwork.html">Formwork Systems</a>
+					  </li>
+					  <li>
+							<a href="technology.html">Technology</a>
+						  </li>
+					</ul>
+				  </li>
+				  <li class="navbar-item navbar-button navbar-dropdown">
+						<a href="#">Projects</a>
+						<div class="dropdown-arrow"></div>
+						<ul class="dropdown-content">
+						  <li>
+							<a href="residential-projects.html">Residential</a>
+						  </li>
+						  <li>
+							<a href="commercial-projects.html">Commercial</a>
+						  </li>
+						  <li>
+								<a href="industrial-projects.html">Industrial</a>
+							  </li>
+							  <li>
+									<a href="institutional-projects.html">Institutional</a>
+								  </li>
+						</ul>
+					  </li>
+					  <li class="navbar-item">
+							<a href="our-clients.html">Clients</a>
+					  </li>
+					  <li class="navbar-item">
+							<a href="careers.html">Careers</a>
+					  </li>
+					  <li class="navbar-item">
+							<a href="contact.html">Contact Us</a>
+					  </li>
+				  
+				</ul>
+			  </div>
+	</header>
+	<!-- Header section end -->   
+
+
+	<!-- Page header section start -->
+	<section class="page-header-section set-bg" data-setbg="img/services-slider.jpg">
+		<div class="container">
+		</div>
+	</section>
+	<!-- Page header section end -->
+
+
+
+	<!-- Intro section start -->
+	<section class="intro-section spad">
+		<div class="container">
+			<div class="row">
+					<h1 class="header-title">Our <span>Services & Capabilities</span></h1>
+
+				<div class="col-lg-5">
+					<div class="service-slider">
+						<div class="ss-single">
+							<img src="img/service/1.jpg" alt="">
+						</div>
+						<div class="ss-single">
+							<img src="img/service/2.jpg" alt="">
+						</div>
+						<div class="ss-single">
+							<img src="img/service/3.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 service-text">
+					<h2>HiTech has the <span> resources and knowledge </span> to undertake just about any job.</h2>
+                   <p>With projects, people, and technology, HiTech has unmatched reach and expertise. 
+                       With the changing Construction regulations and labor laws we have worked successfully under some of the toughest—and we have a proven record of working smoothly with government agencies and labor organizations.
+
+                       <br><br> Orchestrating major operations demands first-rate construction management―something that HiTech vouches for in every service provided in the construction of:</p>
+                    <nav class="accordion arrows">
+                       
+                        <input type="radio" name="accordion" id="cb1" />
+                        <section class="box">
+                            <label class="box-title" for="cb1"><b>Residential Projects</b></label>
+                            <label class="box-close" for="acc-close"></label>
+                            <div class="box-content" style="text-align:center">
+                                <p>Construction of High Rise Buildings</p>    
+                            </div>
+                        </section>
+                        <input type="radio" name="accordion" id="cb2" />
+                        <section class="box">
+                            <label class="box-title" for="cb2"><b>Commercial Projects</b></label>
+                            <label class="box-close" for="acc-close"></label>
+                           
+                        </section>
+                        <input type="radio" name="accordion" id="cb3" />
+                        <section class="box">
+                            <label class="box-title" for="cb3"><b>Industrial Projects</b></label>
+                            <label class="box-close" for="acc-close"></label>
+                            <div class="box-content">
+                                   
+                            </div>
+                        </section>
+                
+                        <input type="radio" name="accordion" id="acc-close" />
+                    </nav>					
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Intro section end -->
+    
+   
+
+	<!-- Service section start -->
+	<section class="service-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h1>Services</h1>
+			</div>
+			<div class="row">
+					<div class="col-lg-2 col-md-6">
+						<h2> CIVIL</h2>
+							<div class="service-box">
+							</div>
+					</div>
+				<div class="col-lg-9 col-md-6">
+					<div class="service-box">
+						
+						<div class="row" style="text-align: center;">
+                                <div class="col-lg-4">
+                                <img src="img/icon/color/1.png">
+                                <br><br>
+                                <p>Earth Work</p>
+                            </div>
+                            <div class="col-lg-4">
+                                    <img src="img/icon/color/2.png">
+                                    <br><br>
+                                    <p>Anti Termite</p>
+                                </div>
+                                <div class="col-lg-4">
+                                        <img src="img/icon/color/3.png">
+                                        <br><br>
+                                        <p>RCC</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                            <img src="img/icon/color/4.png">
+                                            <br><br>
+                                            <p>Block Work</p>
+                                        </div>
+                                        <div class="col-lg-3">
+                                                <img src="img/icon/color/5.png">
+                                                <br><br>
+                                                <p>Plaster</p>
+                                            </div>
+                                            <div class="col-lg-3">
+                                                    <img src="img/icon/color/6.png">
+                                                    <br><br>
+                                                    <p>Waterproofing Work</p>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                        <img src="img/icon/color/7.png">
+                                                        <br><br>
+                                                        <p>Tremix Work</p>
+                                                    </div>
+                                            </div>  
+					</div>
+				</div>
+			</div>
+			<div class="row">
+						<div class="col-lg-2 col-md-6">
+								<h2> FINISHES</h2>
+									<div class="service-box">
+									</div>
+							</div>
+					
+				
+				<div class="col-lg-9 col-md-6">
+					<div class="service-box">
+						
+                                    <div class="row" style="text-align: center;">
+                                            <div class="col-lg-4">
+                                            <img src="img/icon/color/8.png">
+                                            <br><br>
+                                            <p>Flooring</p>
+                                        </div>
+                                        <div class="col-lg-4">
+                                                <img src="img/icon/color/9.png">
+                                                <br><br>
+                                                <p>Door</p>
+                                            </div>
+                                            <div class="col-lg-4">
+                                                    <img src="img/icon/color/10.png">
+                                                    <br><br>
+                                                    <p>Railing</p>
+                                                </div>
+                                            </div>
+                                            <div class="row" style="text-align: center;">
+                                                    <div class="col-lg-4">
+                                                    <img src="img/icon/color/11.png">
+                                                    <br><br>
+                                                    <p>Aluminium</p>
+                                                </div>
+                                                <div class="col-lg-4">
+                                                        <img src="img/icon/color/12.png">
+                                                        <br><br>
+                                                        <p>Painting</p>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                            <img src="img/icon/color/13.png">
+                                                            <br><br>
+                                                            <p>MS Work</p>
+                                                        </div>
+                                                    </div>
+                            
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+			<div class="col-lg-2 col-md-6">
+					<h2> WORK</h2>
+						<div class="service-box">
+						</div>
+				</div>
+		
+	
+	<div class="col-lg-9 col-md-6">
+		<div class="service-box">
+			
+				<div class="row" style="text-align: center;">
+							<div class="col-lg-3">
+							<img src="img/icon/color/14.png">
+							<br><br>
+							<p>Electrical</p>
+						</div>
+						<div class="col-lg-3">
+								<img src="img/icon/color/15.png">
+								<br><br>
+								<p>Plumbing</p>
+							</div>
+							<div class="col-lg-3">
+									<img src="img/icon/color/16.png">
+									<br><br>
+									<p>Fire Fighting Work</p>
+								</div>
+								<div class="col-lg-3">
+										<img src="img/icon/color/17.png">
+										<br><br>
+										<p>Lift Work</p>
+									</div>
+							</div>
+
+				
+</div>
+</div>
+</div>
+	</section>
+	<!-- Service section end -->
+
+
+
+
+
+
+
+	<!-- Footer section start -->
+	<footer class="footer-section">
+			<div class="footer-social">
+				<div class="social-links">
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="https://www.instagram.com/hitechpplofficial/"><i class="fa fa-instagram"></i></a>
+					<a href="https://www.facebook.com/hitechpplofficial/"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/hitechppl"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+							<div class="col-md-4">
+								<div class="footer-item">
+									<div class="col-md-6">
+									<ul>
+										<li><a href="index.html">Home</a></li>
+										<li><a href="about.html">About us</a></li>
+										<li><a href="services-&-capabilities.html">Expertise</a></li>
+										<li><a href="projects.html">Projects</a></li>
+									</ul>
+								</div>
+								<div class="col-md-6">
+									<ul>
+											<li><a href="our-clients.html">Clients</a></li>
+											<li><a href="careers.html">Careers</a></li>
+											<li><a href="contact.html">Contact Us</a></li>
+											<li><a href="projects.html">Projects</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="footer-item">
+									<h3>Address</h3>
+									<p>Hi-Tech Projects Pvt. Ltd. <br>
+											B-401, Solitaire Corporate Park <br> 
+											Nr. Divya Bhaskar House <br>
+											S. G. Highway, Ahmedabad 380051. </p>
+									
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="footer-item">
+										<h3>Contact Us</h3>
+										<table>
+											<tr>
+											<th style="padding-right:10px">
+												<p>Phone: </p>
+											</th>
+											<td><p> +91 - 990 4592 200</p></td> 
+										</tr>
+										<tr>
+											<th></th>
+											<td> <p> +91 - 990 4288 900</p></td>
+	
+										</tr>
+											
+											<tr>
+													<th style="padding-right:10px">
+															<p>Email: </p>
+														</th>
+											<td><p>info@hitechengineers.in</p></td>
+										</table>
+										</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+		
+		</footer>
+		<!-- Footer section end -->
+
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.owl-filter.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/circle-progress.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
