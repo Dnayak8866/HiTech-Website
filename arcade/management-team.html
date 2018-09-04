@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Arcade - Architecture</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Arcade - Architecture Template">
 	<meta name="keywords" content="arcade, architecture, onepage, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->   
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon" />
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/navbar.css"/>
+	    <!-- Bootstrap -->
+		<link href="bootstrapCss/bootstrap.min.css" rel="stylesheet">
+	<!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	
 
 
 
@@ -30,189 +33,341 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<style>
-	.accordion {
-	margin: auto;
-	width: 1000px;
-}
-.accordion input {
-	display: none;
-}
-.box {
-	position: relative;
-	background: white;
-    height: 64px;
-    transition: all .15s ease-in-out;
-}
-.box::before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    pointer-events: none;
-    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
-}
-header.box {
-	background: #dcdcdc;
-	z-index: 100;
-	cursor: initial;
-	box-shadow: 0 -1px 0 #e5e5e5,0 0 2px -2px rgba(0,0,0,.12),0 2px 4px -4px rgba(0,0,0,.24);
-}
-header .box-title {
-	margin: 0;
-	font-weight: normal;
-	font-size: 16pt;
-	color: black;
-	cursor: initial;
-}
-.box-title {
-	width: calc(100% - 40px);
-	height: 64px;
-	line-height: 64px;
-	padding: 0 20px;
-	display: inline-block;
-	cursor: pointer;
-	-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;
-}
-.box-content {
-	width: calc(100% - 40px);
-	padding: 30px 20px;
-	font-size: 11pt;
-	color: rgba(0,0,0,.54);
-	display: none;
-}
-.box-close {
-	position: absolute;
-	height: 64px;
-	width: 100%;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-	display: none;
-}
-input:checked + .box {
-	height: auto;
-	margin: 16px 0;
-    box-shadow: 0 0 6px rgba(0,0,0,.16),0 6px 12px rgba(0,0,0,.32);
-}
-input:checked + .box .box-title {
-	border-bottom: 1px solid rgba(0,0,0,.18);
-}
-input:checked + .box .box-content,
-input:checked + .box .box-close {
-	display: inline-block;
-}
-.arrows section .box-title {
-	padding-left: 44px;
-	width: calc(100% - 64px);
-}
-.arrows section .box-title:before {
-	position: absolute;
-	display: block;
-	content: '\203a';
-	font-size: 18pt;
-	left: 20px;
-	top: -2px;
-	transition: transform .15s ease-in-out;
-	color: rgba(0,0,0,.54);
-}
-input:checked + section.box .box-title:before {
-	transform: rotate(90deg);
-}
+		 .navbar-fixed-top {
+            min-height: 60px;
+        }
 
+        .navbar-fixed-top {
+            min-height: 60px;
+        }
+
+        .navbar-nav>li>a {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            line-height: 80px;
+            font-size: 1.4em !important;
+            color: whitesmoke !important;
+
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav>li>a {
+                line-height: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+            }
+
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: inline;
+            overflow: hidden;
+          
+        }
+
+
+
+
+      
+		.accordion {
+			margin: auto;
+			width: 1000px;
+		}
+
+		.accordion input {
+			display: none;
+		}
+
+		.box {
+			position: relative;
+			background: white;
+			height: 64px;
+			transition: all .15s ease-in-out;
+		}
+
+		.box::before {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			pointer-events: none;
+			box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px rgba(0, 0, 0, .12), 0 2px 4px rgba(0, 0, 0, .24);
+		}
+
+		header.box {
+			background: #dcdcdc;
+			z-index: 100;
+			cursor: initial;
+			box-shadow: 0 -1px 0 #e5e5e5, 0 0 2px -2px rgba(0, 0, 0, .12), 0 2px 4px -4px rgba(0, 0, 0, .24);
+		}
+
+		header .box-title {
+			margin: 0;
+			font-weight: normal;
+			font-size: 16pt;
+			color: black;
+			cursor: initial;
+		}
+
+		.box-title {
+			width: calc(100% - 40px);
+			height: 64px;
+			line-height: 64px;
+			padding: 0 20px;
+			display: inline-block;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+
+		.box-content {
+			width: calc(100% - 40px);
+			padding: 30px 20px;
+			font-size: 11pt;
+			color: rgba(0, 0, 0, .54);
+			display: none;
+		}
+
+		.box-close {
+			position: absolute;
+			height: 64px;
+			width: 100%;
+			top: 0;
+			left: 0;
+			cursor: pointer;
+			display: none;
+		}
+
+		input:checked+.box {
+			height: auto;
+			margin: 16px 0;
+			box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+		}
+
+		input:checked+.box .box-title {
+			border-bottom: 1px solid rgba(0, 0, 0, .18);
+		}
+
+		input:checked+.box .box-content,
+		input:checked+.box .box-close {
+			display: inline-block;
+		}
+
+		.arrows section .box-title {
+			padding-left: 44px;
+			width: calc(100% - 64px);
+		}
+
+		.arrows section .box-title:before {
+			position: absolute;
+			display: block;
+			content: '\203a';
+			font-size: 18pt;
+			left: 20px;
+			top: -2px;
+			transition: transform .15s ease-in-out;
+			color: rgba(0, 0, 0, .54);
+		}
+
+		input:checked+section.box .box-title:before {
+			transform: rotate(90deg);
+		}
 	</style>
 </head>
+
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
+
+	<div class="container-fullwidth">
+			<nav class="navbar navbar-inverse" >
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-elements" aria-expanded="false" style="margin-top:25px">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<div class="navbar-brand" style="width: 200px; height: 100px">
+							<a href="index1.html"><img id="img" class="img-responsive" src="img/logo.png" alt="">
+							</a>
+						</div>
 	
-		<!-- Header section start -->   
-		<header class="header-area">
-
-			
-				<a href="index.html" class="logo-area">
-						<img src="img/logo.png" alt="">
-					</a>
-					<div class="navbar">
-
-		<div class="nav-switch">
-			<i class="fa fa-bars"></i>
+					</div>
+	
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="nav-elements">
+						<ul class="nav navbar-nav navbar-right">
+	
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About US
+									<span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li>
+										<a href="about.html">Who We Are</a>
+									</li>
+									<li>
+										<a href="management-team.html">Our Team</a>
+									</li>
+									<li>
+										<a href="services-capabilities.html">Services & Capabilities</a>
+									</li>
+									<li>
+										<a href="quality-safety.html">Our Standards</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+									Our Expertise<span class="caret"></span></a>
+	
+								<ul class="dropdown-menu">
+									<li>
+										<a href="plant-machinery.html">Plant & Machinery</a>
+									</li>
+									<li>
+										<a href="formwork.html">Formwork Systems</a>
+									</li>
+									<li>
+										<a href="technology.html">Technology</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle"  role="button" aria-haspopup="true" aria-expanded="false">
+									Projects<span class="caret"></span></span></a>
+	
+								<ul class="dropdown-menu">
+									<li>
+										<a href="residential-projects.html">Residential</a>
+									</li>
+									<li>
+										<a href="commercial-projects.html">Commercial</a>
+									</li>
+									<li>
+										<a href="industrial-projects.html">Industrial</a>
+									</li>
+									<li>
+										<a href="institutional-projects.html">Institutional</a>
+									</li>
+								</ul>
+							</li>
+	
+							<li class="navbar-item">
+								<a href="our-clients.html">Clients</a>
+							</li>
+							<li class="navbar-item">
+								<a href="careers.html">Careers</a>
+							</li>
+							<li class="navbar-item">
+								<a href="contact.html">Contact Us</a>
+							</li>
+	
+						</ul>
+	
+	
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
 		</div>
-				<ul>
-				  <li class="navbar-item navbar-button navbar-dropdown">
+
+	<!-- Header section start 
+	<header class="header-area">
+
+
+		<a href="index.html" class="logo-area">
+			<img src="img/logo.png" alt="">
+		</a>
+		<div class="navbar">
+
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<ul>
+				<li class="navbar-item navbar-button navbar-dropdown">
 					<a href="#">About Us</a>
 					<div class="dropdown-arrow"></div>
-					<ul class="dropdown-content" >
-					 
-					  <li>
-						<a href="about.html">Who We Are</a>
-					  </li>
-					  <li>
+					<ul class="dropdown-content">
+
+						<li>
+							<a href="about.html">Who We Are</a>
+						</li>
+						<li>
 							<a href="management-team.html">Our Team</a>
-						  </li>
-						  <li>
-								<a href="services-capabilities.html">Services & Capabilities</a>
-							  </li>
-							  <li>
-									<a href="quality-safety.html">Our Standards</a>
-								  </li>
+						</li>
+						<li>
+							<a href="services-capabilities.html">Services & Capabilities</a>
+						</li>
+						<li>
+							<a href="quality-safety.html">Our Standards</a>
+						</li>
 					</ul>
-				  </li>
-				  <li class="navbar-item navbar-button navbar-dropdown">
+				</li>
+				<li class="navbar-item navbar-button navbar-dropdown">
 					<a href="#">Our Expertise</a>
 					<div class="dropdown-arrow"></div>
 					<ul class="dropdown-content">
-					  <li>
-						<a href="plant-machinery.html">Plant & Machinery</a>
-					  </li>
-					  <li>
-						<a href="formwork.html">Formwork Systems</a>
-					  </li>
-					  <li>
+						<li>
+							<a href="plant-machinery.html">Plant & Machinery</a>
+						</li>
+						<li>
+							<a href="formwork.html">Formwork Systems</a>
+						</li>
+						<li>
 							<a href="technology.html">Technology</a>
-						  </li>
+						</li>
 					</ul>
-				  </li>
-				  <li class="navbar-item navbar-button navbar-dropdown">
-						<a href="#">Projects</a>
-						<div class="dropdown-arrow"></div>
-						<ul class="dropdown-content">
-						  <li>
+				</li>
+				<li class="navbar-item navbar-button navbar-dropdown">
+					<a href="#">Projects</a>
+					<div class="dropdown-arrow"></div>
+					<ul class="dropdown-content">
+						<li>
 							<a href="residential-projects.html">Residential</a>
-						  </li>
-						  <li>
+						</li>
+						<li>
 							<a href="commercial-projects.html">Commercial</a>
-						  </li>
-						  <li>
-								<a href="industrial-projects.html">Industrial</a>
-							  </li>
-							  <li>
-									<a href="institutional-projects.html">Institutional</a>
-								  </li>
-						</ul>
-					  </li>
-					  <li class="navbar-item">
-							<a href="our-clients.html">Clients</a>
-					  </li>
-					  <li class="navbar-item">
-							<a href="careers.html">Careers</a>
-					  </li>
-					  <li class="navbar-item">
-							<a href="contact.html">Contact Us</a>
-					  </li>
-				  
-				</ul>
-			  </div>
+						</li>
+						<li>
+							<a href="industrial-projects.html">Industrial</a>
+						</li>
+						<li>
+							<a href="institutional-projects.html">Institutional</a>
+						</li>
+					</ul>
+				</li>
+				<li class="navbar-item">
+					<a href="our-clients.html">Clients</a>
+				</li>
+				<li class="navbar-item">
+					<a href="careers.html">Careers</a>
+				</li>
+				<li class="navbar-item">
+					<a href="contact.html">Contact Us</a>
+				</li>
+
+			</ul>
+		</div>
 	</header>
 
 
 	<!-- Page header section start -->
 	<section class="page-header-section set-bg" data-setbg="img/team-slider.png">
-	<!--	<div class="container">
+		<!--	<div class="container">
 			<h1 class="header-title">Our Team<span></span></h1>
 		</div>-->
 	</section>
@@ -336,8 +491,8 @@ input:checked + section.box .box-title:before {
 	</div>
 </div>
 <!-- Service box section end -->
-<div class="container">
-	<br>
+	<div class="container">
+		<br>
 		<h1 class="header-title">Our <span>Team</span></h1>
 	</div>
 	<!-- Leadership Team section start -->
@@ -350,29 +505,35 @@ input:checked + section.box .box-title:before {
 				<div class="col-lg-4 col-md-6">
 					<div class="team-member">
 						<img src="img/team/1.jpg" alt="">
-							<h2>Munir Shah</h2>
-							<h4>Co-founder (B.Tech, Civil, CEPT)</h4>
-						
+						<h2>Munir Shah</h2>
+						<h4>Co-founder (B.Tech, Civil, CEPT)</h4>
+
 					</div>
-					<p>Having 25 years of rich experience in management and execution of civil construction. He has utilized his expertise & innovative technologies to achieve excellent quality of works in every project within agreed time schedule. His integrity, knowledge and business ethics has taken this company to the remarkable position in construction industry. His responsiveness & the way to conduct the business is appreciable.
+					<p>Having 25 years of rich experience in management and execution of civil construction. He has utilized his expertise
+						& innovative technologies to achieve excellent quality of works in every project within agreed time schedule. His integrity,
+						knowledge and business ethics has taken this company to the remarkable position in construction industry. His responsiveness
+						& the way to conduct the business is appreciable.
 					</p>
 				</div>
 				<div class="col-lg-4 col-md-4" style="align-content: center">
 					<div class="team-member">
 						<img src="img/team/2.jpg" alt="">
 						<h2>Tejas Dalal</h2>
-							<h4>Co-founder (M.S, Civil, USA)</h4>
-						
+						<h4>Co-founder (M.S, Civil, USA)</h4>
+
 					</div>
-<p>He is technically very competent & highly professional. Having 25 years of experience in management and execution of civil construction, including 5 years of experience in USA.  Armed with an international exposure of best practices and latest know-how, his dream has been to transform the perception of construction businesses in India by making Hi-Tech the symbol of professional integrity.
-</p>
+					<p>He is technically very competent & highly professional. Having 25 years of experience in management and execution
+						of civil construction, including 5 years of experience in USA. Armed with an international exposure of best practices
+						and latest know-how, his dream has been to transform the perception of construction businesses in India by making Hi-Tech
+						the symbol of professional integrity.
+					</p>
 				</div>
 				<div class="col-lg-4 col-md-6">
 					<div class="team-member">
 						<img src="img/team/3.jpg" alt="">
-							<h2>Manish Dave</h2>
-							<h4>COO</h4>
-					
+						<h2>Manish Dave</h2>
+						<h4>COO</h4>
+
 					</div>
 				</div>
 			</div>
@@ -388,11 +549,11 @@ input:checked + section.box .box-title:before {
 				<div class="col-lg-3 col-md-6">
 					<div class="team-member">
 						<img src="img/team/managers/dhyey.jpg" alt="">
-							<h5>Dhyey Pandit</h5>
-							<p>Planning & Billing Engineer</p>
-						
+						<h5>Dhyey Pandit</h5>
+						<p>Planning & Billing Engineer</p>
+
 					</div>
-					
+
 				</div>
 				<div class="col-lg-3 col-md-4" style="align-content: center">
 					<div class="team-member">
@@ -400,7 +561,7 @@ input:checked + section.box .box-title:before {
 						<h5>Hardik Pandya</h5>
 						<p>Jr. Admin Officer</p>
 
-					</div>				
+					</div>
 
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -427,11 +588,11 @@ input:checked + section.box .box-title:before {
 				<div class="col-lg-3 col-md-6">
 					<div class="team-member">
 						<img src="img/team/managers/dhyey.jpg" alt="">
-							<h5>Dhyey Pandit</h5>
-							<p>Planning & Billing Engineer</p>
-						
+						<h5>Dhyey Pandit</h5>
+						<p>Planning & Billing Engineer</p>
+
 					</div>
-					
+
 				</div>
 				<div class="col-lg-3 col-md-4" style="align-content: center">
 					<div class="team-member">
@@ -439,7 +600,7 @@ input:checked + section.box .box-title:before {
 						<h5>Hardik Pandya</h5>
 						<p>Jr. Admin Officer</p>
 
-					</div>				
+					</div>
 
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -466,11 +627,11 @@ input:checked + section.box .box-title:before {
 				<div class="col-lg-3 col-md-6">
 					<div class="team-member">
 						<img src="img/team/managers/dhyey.jpg" alt="">
-							<h5>Dhyey Pandit</h5>
-							<p>Planning & Billing Engineer</p>
-						
+						<h5>Dhyey Pandit</h5>
+						<p>Planning & Billing Engineer</p>
+
 					</div>
-					
+
 				</div>
 				<div class="col-lg-3 col-md-4" style="align-content: center">
 					<div class="team-member">
@@ -478,7 +639,7 @@ input:checked + section.box .box-title:before {
 						<h5>Hardik Pandya</h5>
 						<p>Jr. Admin Officer</p>
 
-					</div>				
+					</div>
 
 				</div>
 				<div class="col-lg-3 col-md-6">
@@ -501,7 +662,7 @@ input:checked + section.box .box-title:before {
 			</div>
 		</div>
 	</section>
-<!--
+	<!--
 	<nav class="accordion arrows">
 		<header class="box">
 			<label for="acc-close" class="box-title">Our Services</label>
@@ -543,93 +704,98 @@ input:checked + section.box .box-title:before {
 		</div>
 	</section>-->
 
-<br><br><br>
+	<br><br><br>
 
 
 	<!-- Footer section start -->
 	<footer class="footer-section">
-			<div class="footer-social">
-				<div class="social-links">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="https://www.instagram.com/hitechpplofficial/"><i class="fa fa-instagram"></i></a>
-					<a href="https://www.facebook.com/hitechpplofficial/"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/hitechppl"><i class="fa fa-twitter"></i></a>
-				</div>
+		<div class="footer-social">
+			<div class="social-links">
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="https://www.instagram.com/hitechpplofficial/"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.facebook.com/hitechpplofficial/"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/hitechppl"><i class="fa fa-twitter"></i></a>
 			</div>
-			<div class="container">
-				<div class="row">
-							<div class="col-md-4">
-								<div class="footer-item">
-										<h3>Quick Links</h3>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-item">
+						<h3>Quick Links</h3>
 
-									<div class="row">
-									<div class="col-md-6">
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="services-capabilities.html">Expertise</a></li>
-										<li><a href="projects.html">Projects</a></li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<ul>
-											<li><a href="our-clients.html">Clients</a></li>
-											<li><a href="careers.html">Careers</a></li>
-											<li><a href="contact.html">Contact Us</a></li>
-											<li><a href="projects.html">Projects</a></li>
-										</ul>
-									</div>
-								</div>
-								</div>
+						<div class="row">
+							<div class="col-md-6">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about.html">About us</a></li>
+									<li><a href="services-capabilities.html">Expertise</a></li>
+									<li><a href="projects.html">Projects</a></li>
+								</ul>
 							</div>
-							<div class="col-md-4">
-								<div class="footer-item">
-									<h3>Address</h3>
-									<p>Hi-Tech Projects Pvt. Ltd. <br>
-											B-401, Solitaire Corporate Park <br> 
-											Nr. Divya Bhaskar House <br>
-											S. G. Highway, Ahmedabad 380051. </p>
-									
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="footer-item">
-										<h3>Contact Us</h3>
-										<table>
-											<tr>
-											<th style="padding-right:10px">
-												<p>Phone: </p>
-											</th>
-											<td><p> +91 - 990 4592 200</p></td> 
-										</tr>
-										<tr>
-											<th></th>
-											<td> <p> +91 - 990 4288 900</p></td>
-	
-										</tr>
-											
-											<tr>
-													<th style="padding-right:10px">
-															<p>Email: </p>
-														</th>
-											<td><p>info@hitechengineers.in</p></td>
-										</table>
-										</div>
+							<div class="col-md-6">
+								<ul>
+									<li><a href="our-clients.html">Clients</a></li>
+									<li><a href="careers.html">Careers</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+									<li><a href="projects.html">Projects</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
+				<div class="col-md-4">
+					<div class="footer-item">
+						<h3>Address</h3>
+						<p>Hi-Tech Projects Pvt. Ltd. <br> B-401, Solitaire Corporate Park <br> Nr. Divya Bhaskar House <br> S. G. Highway,
+							Ahmedabad 380051. </p>
+
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-item">
+						<h3>Contact Us</h3>
+						<table>
+							<tr>
+								<th style="padding-right:10px">
+									<p>Phone: </p>
+								</th>
+								<td>
+									<p> +91 - 990 4592 200</p>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>
+									<p> +91 - 990 4288 900</p>
+								</td>
+
+							</tr>
+
+							<tr>
+								<th style="padding-right:10px">
+									<p>Email: </p>
+								</th>
+								<td>
+									<p>info@hitechengineers.in</p>
+								</td>
+						</table>
+					</div>
+				</div>
 			</div>
-	
-		
-		</footer>
-		<!-- Footer section end -->
+		</div>
+		</div>
+		</div>
+
+
+	</footer>
+	<!-- Footer section end -->
 
 
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<script src="bootstrapJs/bootstrap.min.js"></script>
+	<!--<script src="js/bootstrap.min.js"></script>-->
 	<script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.owl-filter.js"></script>
@@ -637,4 +803,5 @@ input:checked + section.box .box-title:before {
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>

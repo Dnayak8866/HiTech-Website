@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<title>Arcade - Architecture</title>
 	<meta charset="UTF-8">
 	<meta name="description" content="Arcade - Architecture Template">
 	<meta name="keywords" content="arcade, architecture, onepage, creative, html">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- Favicon -->   
-	<link href="img/favicon.ico" rel="shortcut icon"/>
+	<!-- Favicon -->
+	<link href="img/favicon.ico" rel="shortcut icon" />
 
 	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 
 	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/animate.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
-	<link rel="stylesheet" href="css/navbar.css"/>
+	<!--<link rel="stylesheet" href="css/bootstrap.min.css"/>-->
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/animate.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<!-- Bootstrap -->
+	<link href="bootstrapCss/bootstrap.min.css" rel="stylesheet">
 
 
 	<!--[if lt IE 9]>
@@ -26,92 +29,232 @@
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		.navbar-fixed-top {
+			min-height: 60px;
+		}
+
+		.navbar-fixed-top {
+			min-height: 60px;
+		}
+
+		.navbar-nav>li>a {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			line-height: 80px;
+			font-size: 1.4em !important;
+			color: whitesmoke !important;
+
+		}
+
+		@media (max-width: 767px) {
+			.navbar-nav>li>a {
+				line-height: 20px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+			}
+
+		}
+
+		.dropdown:hover .dropdown-menu {
+			display: inline;
+			overflow: hidden;
+
+		}
+
+
+
+
+		body {
+			margin: 0;
+			background-color: white;
+		}
+	</style>
+
 </head>
+
 <body>
 	<!-- Page Preloder -->
 	<div id="preloder">
 		<div class="loader"></div>
 	</div>
-	
-		<!-- Header section start -->   
-		<header class="header-area">
 
-			
-				<a href="index.html" class="logo-area">
-						<img src="img/logo.png" alt="">
-					</a>
-					<div class="navbar">
+	<div class="container-fullwidth">
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-elements" aria-expanded="false"
+					 style="margin-top:25px">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<div class="navbar-brand" style="width: 200px; height: 100px">
+						<a href="index1.html"><img id="img" class="img-responsive" src="img/logo.png" alt="">
+						</a>
+					</div>
 
-		<div class="nav-switch">
-			<i class="fa fa-bars"></i>
-		</div>
-				<ul>
-				  <li class="navbar-item navbar-button navbar-dropdown">
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="nav-elements">
+					<ul class="nav navbar-nav navbar-right">
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About US
+								<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="about.html">Who We Are</a>
+								</li>
+								<li>
+									<a href="management-team.html">Our Team</a>
+								</li>
+								<li>
+									<a href="services-capabilities.html">Services & Capabilities</a>
+								</li>
+								<li>
+									<a href="quality-safety.html">Our Standards</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+								Our Expertise<span class="caret"></span></a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="plant-machinery.html">Plant & Machinery</a>
+								</li>
+								<li>
+									<a href="formwork.html">Formwork Systems</a>
+								</li>
+								<li>
+									<a href="technology.html">Technology</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+								Projects<span class="caret"></span></span></a>
+
+							<ul class="dropdown-menu">
+								<li>
+									<a href="residential-projects.html">Residential</a>
+								</li>
+								<li>
+									<a href="commercial-projects.html">Commercial</a>
+								</li>
+								<li>
+									<a href="industrial-projects.html">Industrial</a>
+								</li>
+								<li>
+									<a href="institutional-projects.html">Institutional</a>
+								</li>
+							</ul>
+						</li>
+
+						<li class="navbar-item">
+							<a href="our-clients.html">Clients</a>
+						</li>
+						<li class="navbar-item">
+							<a href="careers.html">Careers</a>
+						</li>
+						<li class="navbar-item">
+							<a href="contact.html">Contact Us</a>
+						</li>
+
+					</ul>
+
+
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+	</div>
+	<!-- Header section start 
+	<header class="header-area">
+
+
+		<a href="index.html" class="logo-area">
+			<img src="img/logo.png" alt="">
+		</a>
+		<div class="navbar">
+
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<ul>
+				<li class="navbar-item navbar-button navbar-dropdown">
 					<a href="#">About Us</a>
 					<div class="dropdown-arrow"></div>
-					<ul class="dropdown-content" >
-					 
-					  <li>
-						<a href="about.html">Who We Are</a>
-					  </li>
-					  <li>
+					<ul class="dropdown-content">
+
+						<li>
+							<a href="about.html">Who We Are</a>
+						</li>
+						<li>
 							<a href="management-team.html">Our Team</a>
-						  </li>
-						  <li>
-								<a href="services-capabilities.html">Services & Capabilities</a>
-							  </li>
-							  <li>
-									<a href="quality-safety.html">Our Standards</a>
-								  </li>
+						</li>
+						<li>
+							<a href="services-capabilities.html">Services & Capabilities</a>
+						</li>
+						<li>
+							<a href="quality-safety.html">Our Standards</a>
+						</li>
 					</ul>
-				  </li>
-				  <li class="navbar-item navbar-button navbar-dropdown">
+				</li>
+				<li class="navbar-item navbar-button navbar-dropdown">
 					<a href="#">Our Expertise</a>
 					<div class="dropdown-arrow"></div>
 					<ul class="dropdown-content">
-					  <li>
-						<a href="plant-machinery.html">Plant & Machinery</a>
-					  </li>
-					  <li>
-						<a href="formwork.html">Formwork Systems</a>
-					  </li>
-					  <li>
+						<li>
+							<a href="plant-machinery.html">Plant & Machinery</a>
+						</li>
+						<li>
+							<a href="formwork.html">Formwork Systems</a>
+						</li>
+						<li>
 							<a href="technology.html">Technology</a>
-						  </li>
+						</li>
 					</ul>
-				  </li>
-				  <li class="navbar-item navbar-button navbar-dropdown">
-						<a href="#">Projects</a>
-						<div class="dropdown-arrow"></div>
-						<ul class="dropdown-content">
-						  <li>
+				</li>
+				<li class="navbar-item navbar-button navbar-dropdown">
+					<a href="#">Projects</a>
+					<div class="dropdown-arrow"></div>
+					<ul class="dropdown-content">
+						<li>
 							<a href="residential-projects.html">Residential</a>
-						  </li>
-						  <li>
+						</li>
+						<li>
 							<a href="commercial-projects.html">Commercial</a>
-						  </li>
-						  <li>
-								<a href="industrial-projects.html">Industrial</a>
-							  </li>
-							  <li>
-									<a href="institutional-projects.html">Institutional</a>
-								  </li>
-						</ul>
-					  </li>
-					  <li class="navbar-item">
-							<a href="our-clients.html">Clients</a>
-					  </li>
-					  <li class="navbar-item">
-							<a href="careers.html">Careers</a>
-					  </li>
-					  <li class="navbar-item">
-							<a href="contact.html">Contact Us</a>
-					  </li>
-				  
-				</ul>
-			  </div>
+						</li>
+						<li>
+							<a href="industrial-projects.html">Industrial</a>
+						</li>
+						<li>
+							<a href="institutional-projects.html">Institutional</a>
+						</li>
+					</ul>
+				</li>
+				<li class="navbar-item">
+					<a href="our-clients.html">Clients</a>
+				</li>
+				<li class="navbar-item">
+					<a href="careers.html">Careers</a>
+				</li>
+				<li class="navbar-item">
+					<a href="contact.html">Contact Us</a>
+				</li>
+
+			</ul>
+		</div>
 	</header>
-	<!-- Header section end -->   
+	<!-- Header section end -->
 
 
 	<!-- Page header section start -->
@@ -129,121 +272,123 @@
 			<div class="row">
 				<div class="service-text">
 					<h1>Our <span>Clients</span></h1>
-					<p>We work closely with a wide range of clients from different sectors and regions across public sector, private sector and local and national governments. These are just some of the people we’re proud to work with:</p>
+					<p>We work closely with a wide range of clients from different sectors and regions across public sector, private sector
+						and local and national governments. These are just some of the people we’re proud to work with:</p>
 				</div>
 			</div>
 
 			<div class="row">
-					<div class="col-xs-12 col-sm-3">
+				<div class="col-xs-12 col-sm-3">
 					<img src="img/clients/client-logo1.jpg">
 
-					</div>
-					<div class="col-xs-12 col-sm-3">
-						<img src="img/clients/client-logo2.jpg">
-			
-					</div>
-					<div class="col-xs-12 col-sm-3">
-						<img src="img/clients/client-logo3.jpg">
-			
-					</div>
-					<div class="ccol-xs-12 ol-sm-3">
-						<img src="img/clients/client-logo4.jpg">
-			
-					</div>
-			s</div>
-			<div class="row">
-						<div class="col-md-3">
-							<img src="img/clients/client-logo5.jpg">
-			
-						</div>
-						<div class="col-md-3">
-							<img src="img/clients/client-logo6.jpg">
-			
-						</div>
-						<div class="col-md-3">
-							<img src="img/clients/client-logo7.jpg">
-			
-						</div>
-						<div class="col-md-3">
-							<img src="img/clients/client-logo8.jpg">
-			
-						</div>
-						
+				</div>
+				<div class="col-xs-12 col-sm-3">
+					<img src="img/clients/client-logo2.jpg">
+
+				</div>
+				<div class="col-xs-12 col-sm-3">
+					<img src="img/clients/client-logo3.jpg">
+
+				</div>
+				<div class="ccol-xs-12 ol-sm-3">
+					<img src="img/clients/client-logo4.jpg">
+
+				</div>
+				s
 			</div>
 			<div class="row">
-							<div class="col-md-3">
-								<img src="img/clients/client-logo9.jpg">
-			
-							</div>
-							<div class="col-md-3">
-								<img src="img/clients/client-logo10.jpg">
-			
-							</div>
-							<div class="col-md-3">
-								<img src="img/clients/client-logo11.jpg">
-			
-							</div>
-							<div class="col-md-3">
-								<img src="img/clients/client-logo12.jpg">
-			
-							
-							</div>
-						</div>
-						<div class="row">
-							
-								<div class="col-md-3">
-									<img src="img/clients/client-logo13.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo14.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo15.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo16.jpg">
-								</div>
-							</div>
-							<div class="row">
-							
-								<div class="col-md-3">
-									<img src="img/clients/client-logo17.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo18.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo19.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo20.jpg">
-								</div>
-							</div>
-							<div class="row">
-							
-								<div class="col-md-3">
-									<img src="img/clients/client-logo21.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo22.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo23.jpg">
-			
-								</div>
-								<div class="col-md-3">
-									<img src="img/clients/client-logo24.jpg">
-								</div>
-							</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo5.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo6.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo7.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo8.jpg">
+
+				</div>
+
 			</div>
+			<div class="row">
+				<div class="col-md-3">
+					<img src="img/clients/client-logo9.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo10.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo11.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo12.jpg">
+
+
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-3">
+					<img src="img/clients/client-logo13.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo14.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo15.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo16.jpg">
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-3">
+					<img src="img/clients/client-logo17.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo18.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo19.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo20.jpg">
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-md-3">
+					<img src="img/clients/client-logo21.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo22.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo23.jpg">
+
+				</div>
+				<div class="col-md-3">
+					<img src="img/clients/client-logo24.jpg">
+				</div>
+			</div>
+		</div>
 		</div>
 	</section>
 	<!-- Intro section end -->
@@ -308,90 +453,95 @@
 
 	<!-- Footer section start -->
 	<footer class="footer-section">
-			<div class="footer-social">
-				<div class="social-links">
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="https://www.instagram.com/hitechpplofficial/"><i class="fa fa-instagram"></i></a>
-					<a href="https://www.facebook.com/hitechpplofficial/"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/hitechppl"><i class="fa fa-twitter"></i></a>
-				</div>
+		<div class="footer-social">
+			<div class="social-links">
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+				<a href="https://www.instagram.com/hitechpplofficial/"><i class="fa fa-instagram"></i></a>
+				<a href="https://www.facebook.com/hitechpplofficial/"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/hitechppl"><i class="fa fa-twitter"></i></a>
 			</div>
-			<div class="container">
-				<div class="row">
-							<div class="col-md-4">
-								<div class="footer-item">
-										<h3>Quick Links</h3>
+		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="footer-item">
+						<h3>Quick Links</h3>
 
-									<div class="row">
+						<div class="row">
 
-									<div class="col-md-6">
-									<ul>
-										<li><a href="index.html">Home</a></li>
-										<li><a href="about.html">About us</a></li>
-										<li><a href="services-capabilities.html">Expertise</a></li>
-										<li><a href="projects.html">Projects</a></li>
-									</ul>
-								</div>
-								<div class="col-md-6">
-									<ul>
-											<li><a href="our-clients.html">Clients</a></li>
-											<li><a href="careers.html">Careers</a></li>
-											<li><a href="contact.html">Contact Us</a></li>
-											<li><a href="projects.html">Projects</a></li>
-										</ul>
-									</div>
-								</div>
-								</div>
+							<div class="col-md-6">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about.html">About us</a></li>
+									<li><a href="services-capabilities.html">Expertise</a></li>
+									<li><a href="projects.html">Projects</a></li>
+								</ul>
 							</div>
-							<div class="col-md-4">
-								<div class="footer-item">
-									<h3>Address</h3>
-									<p>Hi-Tech Projects Pvt. Ltd. <br>
-											B-401, Solitaire Corporate Park <br> 
-											Nr. Divya Bhaskar House <br>
-											S. G. Highway, Ahmedabad 380051. </p>
-									
-								</div>
-							</div>
-							<div class="col-md-4">
-								<div class="footer-item">
-										<h3>Contact Us</h3>
-										<table>
-											<tr>
-											<th style="padding-right:10px">
-												<p>Phone: </p>
-											</th>
-											<td><p> +91 - 990 4592 200</p></td> 
-										</tr>
-										<tr>
-											<th></th>
-											<td> <p> +91 - 990 4288 900</p></td>
-	
-										</tr>
-											
-											<tr>
-													<th style="padding-right:10px">
-															<p>Email: </p>
-														</th>
-											<td><p>info@hitechengineers.in</p></td>
-										</table>
-										</div>
+							<div class="col-md-6">
+								<ul>
+									<li><a href="our-clients.html">Clients</a></li>
+									<li><a href="careers.html">Careers</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
+									<li><a href="projects.html">Projects</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-	
-		
-		</footer>
-		<!-- Footer section end -->
+				<div class="col-md-4">
+					<div class="footer-item">
+						<h3>Address</h3>
+						<p>Hi-Tech Projects Pvt. Ltd. <br> B-401, Solitaire Corporate Park <br> Nr. Divya Bhaskar House <br> S. G. Highway,
+							Ahmedabad 380051. </p>
 
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="footer-item">
+						<h3>Contact Us</h3>
+						<table>
+							<tr>
+								<th style="padding-right:10px">
+									<p>Phone: </p>
+								</th>
+								<td>
+									<p> +91 - 990 4592 200</p>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>
+									<p> +91 - 990 4288 900</p>
+								</td>
+
+							</tr>
+
+							<tr>
+								<th style="padding-right:10px">
+									<p>Email: </p>
+								</th>
+								<td>
+									<p>info@hitechengineers.in</p>
+								</td>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+
+
+	</footer>
+	<!-- Footer section end -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 
 
 	<!--====== Javascripts & Jquery ======-->
+	<script src="bootstrapJs/bootstrap.min.js"></script>
 	<script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+	<!--<script src="js/bootstrap.min.js"></script>-->
 	<script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/jquery.owl-filter.js"></script>
@@ -399,4 +549,5 @@
 	<script src="js/circle-progress.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
+
 </html>
