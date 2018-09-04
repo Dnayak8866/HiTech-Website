@@ -12,19 +12,19 @@
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css" />-->
     <link rel="stylesheet" href="css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/animate.css" />
     <link rel="stylesheet" href="css/owl.carousel.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="bootstrap3.min.css">
+    <link href="bootstrapCss/bootstrap.min.css" rel="stylesheet" />
 
     <!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -36,7 +36,43 @@
             position: fixed;
             /*Needed because the carousel overrides the position property*/
         }
+        .navbar-fixed-top {
+			min-height: 60px;
+		}
 
+		.navbar-fixed-top {
+			min-height: 60px;
+		}
+
+		.navbar-nav>li>a {
+			padding-top: 0px;
+			padding-bottom: 0px;
+			line-height: 80px;
+			font-size: 1.4em !important;
+			color: whitesmoke !important;
+
+		}
+
+		@media (max-width: 767px) {
+			.navbar-nav>li>a {
+				line-height: 20px;
+				padding-top: 10px;
+				padding-bottom: 10px;
+
+			}
+
+		}
+
+		.dropdown:hover .dropdown-menu {
+			display: inline;
+			overflow: hidden;
+
+		}
+
+		body {
+			margin: 0;
+			background-color: white;
+		}
         /* .modal-dialog{position:relative;width:1000px;margin:.5rem;pointer-events:none} */
     </style>
 </head>
@@ -46,10 +82,105 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
+    <div class="container-fullwidth">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-elements" aria-expanded="false"
+                         style="margin-top:25px">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand" style="width: 200px; height: 100px">
+                            <a href="#"><img id="img" class="img-responsive" src="img/logo.png" alt="">
+                            </a>
+                        </div>
+    
+                    </div>
+    
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="nav-elements">
+                        <ul class="nav navbar-nav navbar-right">
+    
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">About US
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="about.html">Who We Are</a>
+                                    </li>
+                                    <li>
+                                        <a href="management-team.html">Our Team</a>
+                                    </li>
+                                    <li>
+                                        <a href="services-capabilities.html">Services & Capabilities</a>
+                                    </li>
+                                    <li>
+                                        <a href="quality-safety.html">Our Standards</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Our Expertise<span class="caret"></span></a>
+    
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="plant-machinery.html">Plant & Machinery</a>
+                                    </li>
+                                    <li>
+                                        <a href="formwork.html">Formwork Systems</a>
+                                    </li>
+                                    <li>
+                                        <a href="technology.html">Technology</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Projects<span class="caret"></span></span></a>
+    
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="residential-projects.html">Residential</a>
+                                    </li>
+                                    <li>
+                                        <a href="commercial-projects.html">Commercial</a>
+                                    </li>
+                                    <li>
+                                        <a href="industrial-projects.html">Industrial</a>
+                                    </li>
+                                    <li>
+                                        <a href="institutional-projects.html">Institutional</a>
+                                    </li>
+                                </ul>
+                            </li>
+    
+                            <li class="navbar-item">
+                                <a href="our-clients.html">Clients</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="careers.html">Careers</a>
+                            </li>
+                            <li class="navbar-item">
+                                <a href="contact.html">Contact Us</a>
+                            </li>
+    
+                        </ul>
+    
+    
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </div>
     
     <!-- Header section start -->
-    <header class="header-area">
+    <!--<header class="header-area">
 
         <a href="index.html" class="logo-area">
             <img src="img/logo.png" alt="">
@@ -125,7 +256,7 @@
 
             </ul>
         </div>
-    </header>
+    </header>-->
     <!-- Header section end -->
 
 
@@ -170,7 +301,7 @@
                                     <b> Str. Consultant: </b> - </li>
 
                             </ul>
-                            <a href="#lightbox" data-toggle="modal" class="btn btn-dark">GALLERY</a>
+                            <a href="#lightbox" data-toggle="modal" class="btn btn-primary">GALLERY</a>
                             <br>
                         </div>
                         <div class="col-md-4 card" style="border:none;">
@@ -193,7 +324,7 @@
                                     <b> Str. Consultant: </b> Shapoorji Pallonji & Co. Ltd, Umesh & Co. </li>
 
                             </ul>
-                            <a href="#lightbox1" data-toggle="modal" class="btn btn-dark">GALLERY</a>
+                            <a href="#lightbox1" data-toggle="modal" class="btn btn-primary">GALLERY</a>
 
                         </div>
                         <div class="col-md-4 card" style="border:none;">
@@ -217,7 +348,7 @@
                                     <b> Str. Consultant: </b> Alap Kamdar, Snehal Mehta. </li>
 
                             </ul>
-                            <a href="#lightbox2" data-toggle="modal" class="btn btn-dark">GALLERY</a>
+                            <a href="#lightbox2" data-toggle="modal" class="btn btn-primary">GALLERY</a>
                             <br>
                         </div>
                     </div>
@@ -235,11 +366,10 @@
                     <div class="col-md-10" style="text-align: -webkit-center">
                         <div class="modal-dialog">
                             <div class="modal-content" style="width:auto">
-                                <div class="col-md-12">
-                                    <div class="col-md-6"></div>
-                                    <div class="col-md-6" style="float:right">
+                                <div class="modal-header">
+                                    
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
+                                   
                                 </div>
                                 <div class="modal-body">
                                     <ol class="carousel-indicators">
@@ -249,22 +379,19 @@
                                         <li data-target="#lightbox" data-slide-to="3"></li>
                                         <li data-target="#lightbox" data-slide-to="4"></li>
                                     </ol>
-                                    <div class="col-md-12">
+                                    <div >
                                         <div class="carousel-inner">
                                             <div class="item active">
-                                                <img src="img/anandniketan/main-image.jpg" alt="First slide">
+                                                <img src="img/anandniketan/01.jpg" alt="First slide">
                                             </div>
                                             <div class="item">
-                                                <img src="img/anandniketan/01.jpg" alt="Second slide">
+                                                <img src="img/anandniketan/02.jpg" alt="Second slide">
                                             </div>
                                             <div class="item">
-                                                <img src="img/anandniketan/02.jpg" alt="Third slide">
+                                                <img src="img/anandniketan/03.jpg" alt="Third slide">
                                             </div>
                                             <div class="item">
-                                                <img src="img/anandniketan/03.jpg" alt="Fourth slide">
-                                            </div>
-                                            <div class="item">
-                                                <img src="img/anandniketan/04.jpg" alt="Fifth slide">
+                                                <img src="img/anandniketan/04.jpg" alt="Fourth slide">
                                             </div>
                                         </div>
                                         <!-- /.carousel-inner -->
@@ -296,21 +423,20 @@
                         <div class="modal-dialog">
                             <div class="modal-content" style="width:auto">
 
-                                <div class="col-md-12">
-                                    <div class="col-md-6"></div>
-                                    <div class="col-md-6" style="float:right">
+                                <div class="modal-header">
+                                   
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
+                                   
                                 </div>
 
                                 <div class="modal-body">
                                     <ol class="carousel-indicators">
                                         <li data-target="#lightbox1" data-slide-to="0" class="active"></li>
                                     </ol>
-                                    <div class="col-md-12">
+                                    <div >
                                         <div class="carousel-inner">
                                             <div class="item active">
-                                                <img src="img/Narayana/main-image.jpg" alt="First slide">
+                                                <img src="img/Narayana/01.jpg" alt="First slide">
                                             </div>
                                         </div>
                                         <!-- /.carousel-inner -->
@@ -342,21 +468,20 @@
                     <div class="col-md-10" style="text-align: -webkit-center">
                         <div class="modal-dialog">
                             <div class="modal-content" style="width:auto">
-                                <div class="col-md-12">
-                                    <div class="col-md-6"></div>
-                                    <div class="col-md-6" style="float:right">
+                                <div class="modal-header">
+                                   
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
+                                    
                                 </div>
 
                                 <div class="modal-body">
                                     <ol class="carousel-indicators">
                                         <li data-target="#lightbox2" data-slide-to="0" class="active"></li>
                                     </ol>
-                                    <div class="col-md-12">
+                                    <div>
                                         <div class="carousel-inner">
                                             <div class="item active">
-                                                <img src="img/Parekhs/main-image.jpg" alt="First slide">
+                                                <img src="img/Parekhs/01.jpg" alt="First slide">
                                             </div>                        
                                         </div>
                                         <!-- /.carousel-inner -->
@@ -560,16 +685,17 @@
 
     <!--====== Javascripts & Jquery ======-->
     <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/navbar.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    
+    <!--<script src="js/bootstrap.min.js"></script>-->
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.owl-filter.js"></script>
     <script src="js/magnific-popup.min.js"></script>
     <script src="js/circle-progress.min.js"></script>
     <script src="js/main.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src="bootstrapJs/bootstrap.min.js"></script>
+    <!--<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>-->
+    <!--<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>-->
 
 
 
